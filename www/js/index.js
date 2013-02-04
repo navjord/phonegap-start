@@ -48,7 +48,8 @@ var app = {
     	window.plugins.childBrowser.onLocationChange = function(url){
     		$('#deviceready').append(url);
     	};
-    	window.plugins.childBrowser.showWebPage("https://moterom2.uwap.org/appFile.html", { showLocationBar: true });
+//    	window.plugins.childBrowser.showWebPage("https://moterom2.uwap.org/appFile.html", { showLocationBar: true });
+    	window.plugins.childBrowser.showWebPage("http://www.google.com", { showLocationBar: true });
     	
     }
 };
