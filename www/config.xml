@@ -3,14 +3,14 @@
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.phonegap.hello-world"
         version   = "2.2.0">
-    <name>Hello World</name>
+    <name>Møterom</name>
 
     <description>
-        Hello World sample application that responds to the deviceready event.
+        Currently Hello World sample application that responds to the deviceready event...
     </description>
 
     <author href="http://phonegap.com" email="support@phonegap.com">
-        PhoneGap Team
+        PhoneGap Team+
     </author>
 
     <feature name="http://api.phonegap.com/1.0/device" />
@@ -45,4 +45,5 @@
     <gap:splash src="res/screen/ios/screen-ipad-portrait.png"      gap:platform="ios"     width="768" height="1024" />
     <gap:splash src="res/screen/ios/screen-ipad-landscape.png"     gap:platform="ios"     width="1024" height="768" />
     <gap:splash src="res/screen/windows-phone/screen-portrait.jpg" gap:platform="winphone" />
+    <gap:plugin name="ChildBrowser" />
 </widget>

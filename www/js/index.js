@@ -27,6 +27,7 @@ var app = {
         // This is an event handler function, which means the scope is the event.
         // So, we must explicitly called `app.report()` instead of `this.report()`.
         app.report('deviceready');
+        app.testChildBrowser();
     },
     report: function(id) {
         // Report the event in the console
@@ -38,5 +39,8 @@ var app = {
         document.querySelector('#' + id + ' .pending').className += ' hide';
         var completeElem = document.querySelector('#' + id + ' .complete');
         completeElem.className = completeElem.className.split('hide').join('');
+    },
+    testChildBrowser: function(){
+    	window.plugins.childBrowser.showWebPage("http://www.google.com", { showLocationBar: true });
     }
 };
