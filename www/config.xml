@@ -6,7 +6,7 @@
     <name>Møterom</name>
 
     <description>
-        Currently Hello World sample application that responds to the deviceready event...
+        An application for using moterom2.uwap.org 
     </description>
 
     <author href="http://phonegap.com" email="support@phonegap.com">
