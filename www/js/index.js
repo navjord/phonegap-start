@@ -45,11 +45,11 @@ var app = {
         completeElem.className = completeElem.className.split('hide').join('');
     },
     testChildBrowser: function(){
-//    	var ref = window.open('http://apache.org', '_blank', 'location=yes');
-    	window.plugins.childBrowser.onLocationChange = function(url){
-    		$('#deviceready').append(url);
-    	};
-    	window.plugins.childBrowser.showWebPage("https://moterom2.uwap.org/appFile.html", { showLocationBar: true });
+    	var ref = window.open('http://apache.org', '_blank', 'location=yes');
+//    	window.plugins.childBrowser.onLocationChange = function(url){
+//    		$('#deviceready').append(url);
+//    	};
+//    	window.plugins.childBrowser.showWebPage("https://moterom2.uwap.org/appFile.html", { showLocationBar: true });
 //    	window.plugins.childBrowser.showWebPage("http://writecodeonline.com/javascript/", { showLocationBar: true });
 //    	window.plugins.childBrowser.showWebPage("http://www.google.com", { showLocationBar: true });
     	
