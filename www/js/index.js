@@ -45,7 +45,7 @@ var app = {
         completeElem.className = completeElem.className.split('hide').join('');
     },
     testChildBrowser: function(){
-    	document.write('v34');
+    	document.write('v35');
 //    	var ref = window.open('http://apache.org', '_blank', 'location=yes');
 //    	window.plugins.childBrowser.onLocationChange = function(url){
 //    		$('#deviceready').append(url);
