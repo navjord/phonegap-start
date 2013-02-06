@@ -4,11 +4,13 @@ define(function(require, exports, module) {
 	alert('requireAlert');
 	
 	
+	alert(window.plugins);
+	jso_registerRedirectHandler(window.plugins.childBrowser.showWebPage);
+//	document.addEventListener('deviceready', deviceReady, false);
+//
+//	document.addEventListener('deviceready', function(){alert('deviceready');}, false);
+	deviceready();
 	
-	
-	document.addEventListener('deviceready', deviceReady, false);
-
-	document.addEventListener('deviceready', function(){alert('deviceready');}, false);
 	function deviceready() {
 		console.log('devicereadyInRequireJS');
 		alert('devicereadyAlert');
