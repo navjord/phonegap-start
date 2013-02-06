@@ -136,7 +136,9 @@ define(function(require, exports, module) {
 			checkPG();
 //			alert(UWAP.auth.jso_registerRedirectHandler);
 			
-			function checkPG()
+			function checkPG(){
+				
+			
 			if(!window.plugins){
 				alert('not window-plugins');
 				setTimeout(this, 200);
