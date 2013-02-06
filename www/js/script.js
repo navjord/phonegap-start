@@ -133,7 +133,7 @@ define(function(require, exports, module) {
 	
 	$(document).ready(function() {
 			
-			alert(window.plugins.childBrowser.showWebPage);
+			alert(window.plugins);
 			alert(jso_registerRedirectHandler);
 			jso_registerRedirectHandler(window.plugins.childBrowser.showWebPage);
 			var m = new MRController($("div#main"));
