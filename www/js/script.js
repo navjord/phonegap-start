@@ -141,7 +141,7 @@ define(function(require, exports, module) {
 	}	
 	
 	function moveOn(){
-		jso_registerRedirectHandler(window.plugins.childBrowser.showWebPage);
+		UWAP.auth.jso_registerRedirectHandler(window.plugins.childBrowser.showWebPage);
 		var m = new MRController($("div#main"));
 
 			var groupHandler = function(room) {
@@ -166,9 +166,9 @@ define(function(require, exports, module) {
 	
 	
 	$(document).ready(function() {
-			
-			alert(jso_registerRedirectHandler);
 			checkPG();
+			alert(UWAP.auth.jso_registerRedirectHandler);
+			
 			
 		});
 });
