@@ -45,7 +45,7 @@ requirejs.config({
 		'uwap': '/_/js',
 	},
 	//baseUrl: "https://moterom2.uwap.org/js",
-	baseUrl: "https://moterom2.uwap.org/js",
+//	baseUrl: "https://moterom2.uwap.org/js",
 	shim: {
 		'uwap-core/js/jquery.tmpl': {deps: ['jquery'], exports: 'jQuery'},
 

@@ -42,7 +42,7 @@ define(function(require, exports, module) {
 	
 	
 	
-	
+		console.log('new test');
 		var $ = require('jquery'), UWAP = require('uwap-core/js/core'), moment = require('uwap-core/js/moment'),
 		// moment = require('moment')
 		hogan = require('uwap-core/js/hogan'), prettydate = require('uwap-core/js/pretty');
@@ -61,12 +61,12 @@ define(function(require, exports, module) {
 		require('uwap-core/bootstrap/js/bootstrap-button');
 		require('uwap-core/bootstrap/js/bootstrap-dropdown');
 
-		if (typeof window.console == "undefined") {
-			window.console = {
-				log : function() {
-				}
-			};
-		}
+//		if (typeof window.console == "undefined") {
+//			window.console = {
+//				log : function() {
+//				}
+//			};
+//		}
 
 		/*
 		 * JavaScript Pretty Date Copyright (c) 2011 John Resig (ejohn.org)
