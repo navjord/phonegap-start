@@ -8,15 +8,15 @@ define(function(require, exports, module) {
 	
 	
 	var tmpl = {
-		    "authDialog": require('uwap-core/js/text!templates/authDialogTmpl.html'),
-		    "auth": require('uwap-core/js/text!templates/authTmpl.html'),
-		    "deviceInfo":  require('uwap-core/js/text!templates/deviceInfoTmpl.html'),
-		    "event": require('uwap-core/js/text!templates/eventTmpl.html'),
-		    "nowDanger": require('uwap-core/js/text!templates/nowDangerTmpl.html'),
-		    "nowSuccess": require('uwap-core/js/text!templates/nowSuccessTmpl.html'),
-		    "nowWarning": require('uwap-core/js/text!templates/nowWarningTmpl.html'),
-		    "reg": require('uwap-core/js/text!templates/regTmpl.html'),
-		    "room": require('uwap-core/js/text!templates/roomTmpl.html')
+		    "authDialog": require('text!templates/authDialogTmpl.html'),
+		    "auth": require('text!templates/authTmpl.html'),
+		    "deviceInfo":  require('text!templates/deviceInfoTmpl.html'),
+		    "event": require('text!templates/eventTmpl.html'),
+		    "nowDanger": require('text!templates/nowDangerTmpl.html'),
+		    "nowSuccess": require('text!templates/nowSuccessTmpl.html'),
+		    "nowWarning": require('text!templates/nowWarningTmpl.html'),
+		    "reg": require('text!templates/regTmpl.html'),
+		    "room": require('text!templates/roomTmpl.html')
 	};
 
 	var MRController =  function(el) {
