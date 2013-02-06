@@ -2,8 +2,9 @@ define(function(require, exports, module) {
 	console.log('requireLog');
 	alert('requireAlert');
 	
-	loadJS('childbrowser.js');
 	loadJS('phonegap.js');
+	loadJS('childbrowser.js');
+	
 	
 	function loadJS(fileName){
 		var fileref=document.createElement('script');
