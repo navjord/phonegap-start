@@ -145,16 +145,16 @@ define(function(require, exports, module) {
 //				alert('not window-plugins');
 				setTimeout(checkPG, 200);
 			} else {
-//				alert('moving on');
+				alert('moving on');
 				moveOn();
 			}
 		}	
 		
 		function moveOn(){
-			if(!jso_registerRedirectHandler){
-				alert('no jso_registerRedirectHandler');
-			}
-			jso_registerRedirectHandler(window.plugins.childBrowser.showWebPage);
+//			if(!jso_registerRedirectHandler){
+//				alert('no jso_registerRedirectHandler');
+//			}
+//			jso_registerRedirectHandler(window.plugins.childBrowser.showWebPage);
 			var m = new MRController($("div#main"));
 
 				var groupHandler = function(room) {

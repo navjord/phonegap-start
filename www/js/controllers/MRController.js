@@ -59,7 +59,7 @@ define(function(require, exports, module) {
 //				$.proxy(this.processNotLoggedIn, this)
 //				
 //			);
-			
+			alert('about to require');
 			UWAP.auth.require(
 					$.proxy(this.processNotLoggedIn, this)
 			);
