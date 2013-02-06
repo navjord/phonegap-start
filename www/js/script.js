@@ -8,8 +8,8 @@ define(function(require, exports, module) {
 	
 	document.addEventListener('deviceready', deviceReady, false);
 	function deviceready() {
-//		console.log('devicereadyInRequireJS');
-//		alert('devicereadyAlert');
+		console.log('devicereadyInRequireJS');
+		alert('devicereadyAlert');
 //		
 //		
 //		loadJS('phonegap.js');
