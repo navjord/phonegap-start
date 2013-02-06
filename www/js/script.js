@@ -133,12 +133,8 @@ define(function(require, exports, module) {
 	
 	
 	$(document).ready(function() {
+		alert('doc ready');
 		checkPG();
-//			alert(UWAP.auth.jso_registerRedirectHandler);
-			
-
-
-
 
 		function checkPG() {
 			if (!window.plugins) {
