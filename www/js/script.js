@@ -129,46 +129,46 @@ define(function(require, exports, module) {
 		}
 		moment.lang('en');
 
-	function checkPG()
-		if(!window.plugins){
-			alert('not window-plugins');
-			setTimeout(this, 200);
-		}
-		else{
-			alert('moving on');
-			moveOn();
-		}
-	}	
 	
-	function moveOn(){
-		UWAP.auth.jso_registerRedirectHandler(window.plugins.childBrowser.showWebPage);
-		var m = new MRController($("div#main"));
-
-			var groupHandler = function(room) {
-				m.mainRoom = room;
-			};
-			var deviceHandler = function(device) {
-				console.log(device);
-			};
-			var devicesHandler = function() {
-
-			};
-
-			var routes = {
-				'/room/:id' : groupHandler,
-				'/device/:id' : deviceHandler,
-				'/devices' : devicesHandler
-			};
-
-			var router = Router(routes);
-			router.init();
-	}
 	
 	
 	$(document).ready(function() {
 			checkPG();
 			alert(UWAP.auth.jso_registerRedirectHandler);
 			
-			
+			function checkPG()
+			if(!window.plugins){
+				alert('not window-plugins');
+				setTimeout(this, 200);
+			}
+			else{
+				alert('moving on');
+				moveOn();
+			}
+		}	
+		
+		function moveOn(){
+			UWAP.auth.jso_registerRedirectHandler(window.plugins.childBrowser.showWebPage);
+			var m = new MRController($("div#main"));
+
+				var groupHandler = function(room) {
+					m.mainRoom = room;
+				};
+				var deviceHandler = function(device) {
+					console.log(device);
+				};
+				var devicesHandler = function() {
+
+				};
+
+				var routes = {
+					'/room/:id' : groupHandler,
+					'/device/:id' : deviceHandler,
+					'/devices' : devicesHandler
+				};
+
+				var router = Router(routes);
+				router.init();
+		}
 		});
 });
