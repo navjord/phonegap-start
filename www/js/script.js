@@ -1,6 +1,4 @@
 define(function(require, exports, module) {
-	require('phonegap');
-	require('childbrowser');
 	
 	console.log('requireLog');
 	alert('requireAlert');
