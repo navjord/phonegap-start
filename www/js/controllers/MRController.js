@@ -214,13 +214,16 @@ define(function(require, exports, module) {
 			this.load();
 		};
 		MRController.prototype.processNotLoggedIn = function(user) {
+			alert('inProcessNotLoggedIn');
 			var that = this;
 			this.user = user;
 			console.log(this.user);
+			alert(this.user);
 			console.log("Not logged in");
 			var device = localStorage.getItem('device');
 
 			if (device) {
+				alert(device);
 				this.device = JSON.parse(device);
 				if (this.device.room) {
 					this.mainRoom = this.device.room;
@@ -231,6 +234,7 @@ define(function(require, exports, module) {
 				this.showDeviceInfo(this.device);
 				this.load();
 			} else {
+				alert('notdevice');
 				this.showAuthDialog();
 			}
 		};
