@@ -1,5 +1,6 @@
 define(function(require, exports, module) {
 	console.log('requireLog');
+	alert('requireAlert');
 	
 	loadJS('childbrowser.js');
 	loadJS('phonegap.js');
@@ -15,6 +16,7 @@ define(function(require, exports, module) {
 	document.addEventListener('deviceready', deviceReady, false);
 	function deviceready() {
 		console.log('devicereadyInRequireJS');
+		alert('devicereadyAlert');
 		var $ = require('jquery'), UWAP = require('uwap-core/js/core'), moment = require('uwap-core/js/moment'),
 		// moment = require('moment')
 		hogan = require('uwap-core/js/hogan'), prettydate = require('uwap-core/js/pretty');
