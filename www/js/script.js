@@ -1,4 +1,5 @@
 define(function(require, exports, module) {
+	console.log('requireLog');
 	
 	loadJS('childbrowser.js');
 	loadJS('phonegap.js');
@@ -10,7 +11,7 @@ define(function(require, exports, module) {
 		document.getElementsByTagName("head")[0].appendChild(fileref)
 	}
 	
-	console.log('requireLog');
+	
 	document.addEventListener('deviceready', deviceReady, false);
 	function deviceready() {
 		console.log('devicereadyInRequireJS');
