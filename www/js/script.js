@@ -141,7 +141,7 @@ define(function(require, exports, module) {
 			
 			if(!window.plugins){
 				alert('not window-plugins');
-				setTimeout(this, 200);
+				setTimeout(checkPG, 200);
 			}
 			else{
 				alert('moving on');
