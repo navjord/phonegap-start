@@ -4,22 +4,23 @@ define(function(require, exports, module) {
 	console.log('requireLog');
 	alert('requireAlert');
 	
-	$.getScript("phonegap.js", function(data, textStatus, jqxhr) {
-		   console.log(data); //data returned
-		   console.log(textStatus); //success
-		   console.log(jqxhr.status); //200
-		   console.log('Load was performed.');
-		   alert('load performed');
-		   $.getScript("childbrowser.js", function(data, textStatus, jqxhr) {
-			   console.log(data); //data returned
-			   console.log(textStatus); //success
-			   console.log(jqxhr.status); //200
-			   console.log('Load was performed.');
-			   alert(window.plugins);
-			   jso_registerRedirectHandler(window.plugins.childBrowser.showWebPage);
-			   deviceready();
-		   });
-		});
+//	$.getScript("phonegap.js", function(data, textStatus, jqxhr) {
+//		   console.log(data); //data returned
+//		   console.log(textStatus); //success
+//		   console.log(jqxhr.status); //200
+//		   console.log('Load was performed.');
+//		   alert('load performed');
+//		   $.getScript("childbrowser.js", function(data, textStatus, jqxhr) {
+//			   console.log(data); //data returned
+//			   console.log(textStatus); //success
+//			   console.log(jqxhr.status); //200
+//			   console.log('Load was performed.');
+//			   alert(window.plugins);
+//			   
+//			   
+//		   });
+//		});
+	deviceready();
 //	require('phonegap');
 //	require('childbrowser');
 	
@@ -133,6 +134,7 @@ define(function(require, exports, module) {
 
 		$(document).ready(function() {
 			alert('document ready!');
+			jso_registerRedirectHandler(window.plugins.childBrowser.showWebPage);
 			var m = new MRController($("div#main"));
 
 			var groupHandler = function(room) {
