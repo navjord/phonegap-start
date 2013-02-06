@@ -43,9 +43,6 @@ define(function(require, exports, module) {
 		console.log('devicereadyInRequireJS');
 		alert('devicereadyAlert');
 //		
-//		
-
-//	
 	
 	
 		var $ = require('jquery'), UWAP = require('uwap-core/js/core'), moment = require('uwap-core/js/moment'),
@@ -135,6 +132,7 @@ define(function(require, exports, module) {
 		moment.lang('en');
 
 		$(document).ready(function() {
+			alert('document ready!');
 			var m = new MRController($("div#main"));
 
 			var groupHandler = function(room) {
