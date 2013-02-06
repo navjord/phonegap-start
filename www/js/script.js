@@ -4,31 +4,50 @@ define(function(require, exports, module) {
 	console.log('requireLog');
 	alert('requireAlert');
 	
-	require('phonegap');
-	require('childbrowser');
-	alert(window.plugins);
+	$.getScript("phonegap.js", function(data, textStatus, jqxhr) {
+		   console.log(data); //data returned
+		   console.log(textStatus); //success
+		   console.log(jqxhr.status); //200
+		   console.log('Load was performed.');
+		   alert('load performed');
+		   $.getScript("childbrowser.js", function(data, textStatus, jqxhr) {
+			   console.log(data); //data returned
+			   console.log(textStatus); //success
+			   console.log(jqxhr.status); //200
+			   console.log('Load was performed.');
+			   alert(window.plugins);
+			   jso_registerRedirectHandler(window.plugins.childBrowser.showWebPage);
+			   deviceready();
+		   });
+		});
+//	require('phonegap');
+//	require('childbrowser');
 	
-	jso_registerRedirectHandler(window.plugins.childBrowser.showWebPage);
+	
+//			loadJS('phonegap.js');
+//		loadJS('childbrowser.js');
+//	function loadJS(fileName){
+//		var fileref=document.createElement('script');
+//		fileref.setAttribute("type","text/javascript");
+//		fileref.setAttribute("src", filename);
+//		document.getElementsByTagName("head")[0].appendChild(fileref)
+//	}
+	
+	
 //	document.addEventListener('deviceready', deviceReady, false);
 //
 //	document.addEventListener('deviceready', function(){alert('deviceready');}, false);
-	deviceready();
+//	deviceready();
 	
 	function deviceready() {
 		console.log('devicereadyInRequireJS');
 		alert('devicereadyAlert');
 //		
 //		
-//		loadJS('phonegap.js');
-//		loadJS('childbrowser.js');
+
 //	
 	
-	function loadJS(fileName){
-		var fileref=document.createElement('script');
-		fileref.setAttribute("type","text/javascript");
-		fileref.setAttribute("src", filename);
-		document.getElementsByTagName("head")[0].appendChild(fileref)
-	}
+	
 		var $ = require('jquery'), UWAP = require('uwap-core/js/core'), moment = require('uwap-core/js/moment'),
 		// moment = require('moment')
 		hogan = require('uwap-core/js/hogan'), prettydate = require('uwap-core/js/pretty');
