@@ -60,6 +60,14 @@ define(function(require, exports, module) {
 		require('uwap-core/bootstrap/js/bootstrap-collapse');
 		require('uwap-core/bootstrap/js/bootstrap-button');
 		require('uwap-core/bootstrap/js/bootstrap-dropdown');
+		
+		UWAP.utils.jso_configure({
+			"uwap": {
+				client_id: "app_moterom",
+				authorization: UWAP.utils.getEngineURL('/api/oauth/authorization'),
+				redirect_uri: "https://moterom.uwap.org/_/passiveResponse"
+			}
+		});
 
 //		if (typeof window.console == "undefined") {
 //			window.console = {
