@@ -1,10 +1,13 @@
 define(function(require, exports, module) {
 	
+	
 	console.log('requireLog');
 	alert('requireAlert');
 	
-	
+	require('phonegap');
+	require('childbrowser');
 	alert(window.plugins);
+	
 	jso_registerRedirectHandler(window.plugins.childBrowser.showWebPage);
 //	document.addEventListener('deviceready', deviceReady, false);
 //
