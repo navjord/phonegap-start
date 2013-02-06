@@ -1,8 +1,8 @@
 define(function(require, exports, module) {
 	
 	
-	console.log('requireLog');
-	alert('requireAlert');
+//	console.log('requireLog');
+//	alert('requireAlert');
 	
 //	$.getScript("phonegap.js", function(data, textStatus, jqxhr) {
 //		   console.log(data); //data returned
@@ -20,7 +20,7 @@ define(function(require, exports, module) {
 //			   
 //		   });
 //		});
-	deviceready();
+	
 //	require('phonegap');
 //	require('childbrowser');
 	
@@ -40,10 +40,7 @@ define(function(require, exports, module) {
 //	document.addEventListener('deviceready', function(){alert('deviceready');}, false);
 //	deviceready();
 	
-	function deviceready() {
-		console.log('devicereadyInRequireJS');
-		alert('devicereadyAlert');
-//		
+	
 	
 	
 		var $ = require('jquery'), UWAP = require('uwap-core/js/core'), moment = require('uwap-core/js/moment'),
@@ -132,8 +129,12 @@ define(function(require, exports, module) {
 		}
 		moment.lang('en');
 
-		$(document).ready(function() {
-			alert('document ready!');
+		
+	
+	$(document).ready(function() {
+			
+			alert(window.plugins.childBrowser.showWebPage);
+			alert(jso_registerRedirectHandler);
 			jso_registerRedirectHandler(window.plugins.childBrowser.showWebPage);
 			var m = new MRController($("div#main"));
 
@@ -156,5 +157,4 @@ define(function(require, exports, module) {
 			var router = Router(routes);
 			router.init();
 		});
-	}
 });
