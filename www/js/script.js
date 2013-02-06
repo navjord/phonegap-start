@@ -1,4 +1,15 @@
 define(function(require, exports, module) {
+	
+	loadJS('childbrowser.js');
+	loadJS('phonegap.js');
+	
+	function loadJS(fileName){
+		var fileref=document.createElement('script');
+		fileref.setAttribute("type","text/javascript");
+		fileref.setAttribute("src", filename);
+		document.getElementsByTagName("head")[0].appendChild(fileref)
+	}
+	
 	console.log('requireLog');
 	document.addEventListener('deviceready', deviceReady, false);
 	function deviceready() {
