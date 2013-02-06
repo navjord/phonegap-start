@@ -142,7 +142,7 @@ define(function(require, exports, module) {
 
 		function checkPG() {
 			if (!window.plugins) {
-//				alert('not window-plugins');
+				alert('not window-plugins');
 				setTimeout(checkPG, 200);
 			} else {
 				alert('moving on');
