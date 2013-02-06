@@ -192,7 +192,10 @@ define(function(require, exports, module) {
 		
 		MRController.prototype.getRoomConfig = function(){
 			var that = this;
-				UWAP.data.get('https://moterom2.uwap.org/config.json', null, function(d){ that.roomConfig = d; if(!(that.data == null)){that.updateData(this.data);}}, function(err){console.log(err);});
+			//	UWAP.data.get('https://moterom2.uwap.org/config.json', null, function(d){ that.roomConfig = d; if(!(that.data == null)){that.updateData(this.data);}}, function(err){console.log(err);});
+				$.get('https://moterom2.uwap.org/config.json', function(d){
+					 that.roomConfig = d; if(!(that.data == null)){that.updateData(this.data);}
+				});
 		};
 		
 		MRController.prototype.uuid = function() {
