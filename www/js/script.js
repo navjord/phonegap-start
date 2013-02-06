@@ -141,7 +141,7 @@ define(function(require, exports, module) {
 
 
 		function checkPG() {
-			if (!window.plugins.childBrowser.showWebPage) {
+			if (!window.plugins) {
 //				alert('not window-plugins');
 				setTimeout(checkPG, 200);
 			} else {
