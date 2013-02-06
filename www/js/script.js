@@ -7,6 +7,8 @@ define(function(require, exports, module) {
 	
 	
 	document.addEventListener('deviceready', deviceReady, false);
+
+	document.addEventListener('deviceready', function(){alert('deviceready');}, false);
 	function deviceready() {
 		console.log('devicereadyInRequireJS');
 		alert('devicereadyAlert');
