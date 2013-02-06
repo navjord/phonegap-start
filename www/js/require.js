@@ -66,8 +66,8 @@ requirejs.config({
 		'uwap-core/bootstrap/js/bootstrap-typeahead': {deps: ['jquery', 'uwap-core/bootstrap/js/bootstrap'], exports: 'jQuery'}
 	}
 });
-//requirejs.enginehostname = 'uwap.org';
-//requirejs.hostname = 'moterom2.uwap.org';
-//requirejs.scheme = 'https';
-//requirejs.appid = 'moterom2';
+requirejs.enginehostname = 'uwap.org';
+requirejs.hostname = 'moterom2.uwap.org';
+requirejs.scheme = 'https';
+requirejs.appid = 'moterom2';
 
