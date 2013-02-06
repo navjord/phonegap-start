@@ -133,24 +133,28 @@ define(function(require, exports, module) {
 	
 	
 	$(document).ready(function() {
-			checkPG();
+		checkPG();
 //			alert(UWAP.auth.jso_registerRedirectHandler);
 			
-			function checkPG(){
-				
-			
-			if(!window.plugins){
-				alert('not window-plugins');
+
+
+
+
+		function checkPG() {
+			if (!window.plugins.childBrowser.showWebPage) {
+//				alert('not window-plugins');
 				setTimeout(checkPG, 200);
-			}
-			else{
-				alert('moving on');
+			} else {
+//				alert('moving on');
 				moveOn();
 			}
 		}	
 		
 		function moveOn(){
-			UWAP.auth.jso_registerRedirectHandler(window.plugins.childBrowser.showWebPage);
+			if(!jso_registerRedirectHandler){
+				alert('no jso_registerRedirectHandler');
+			}
+			jso_registerRedirectHandler(window.plugins.childBrowser.showWebPage);
 			var m = new MRController($("div#main"));
 
 				var groupHandler = function(room) {
