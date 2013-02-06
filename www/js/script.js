@@ -129,14 +129,20 @@ define(function(require, exports, module) {
 		}
 		moment.lang('en');
 
-		
+	function checkPG()
+		if(!window.plugins){
+			alert('not window-plugins');
+			setTimeout(this, 200);
+		}
+		else{
+			alert('moving on');
+			moveOn();
+		}
+	}	
 	
-	$(document).ready(function() {
-			
-			alert(window.plugins);
-			alert(jso_registerRedirectHandler);
-			jso_registerRedirectHandler(window.plugins.childBrowser.showWebPage);
-			var m = new MRController($("div#main"));
+	function moveOn(){
+		jso_registerRedirectHandler(window.plugins.childBrowser.showWebPage);
+		var m = new MRController($("div#main"));
 
 			var groupHandler = function(room) {
 				m.mainRoom = room;
@@ -156,5 +162,13 @@ define(function(require, exports, module) {
 
 			var router = Router(routes);
 			router.init();
+	}
+	
+	
+	$(document).ready(function() {
+			
+			alert(jso_registerRedirectHandler);
+			checkPG();
+			
 		});
 });
